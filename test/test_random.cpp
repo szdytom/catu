@@ -5,7 +5,8 @@ using namespace std;
 using namespace catu;
 
 int main() {
-	rand_init(3);
+	rand_init();
+	test_init(3);
 
 	// #1
 	int x = rrange(10, 20);
