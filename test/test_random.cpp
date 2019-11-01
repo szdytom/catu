@@ -3,5 +3,5 @@ using namespace std;
 
 int main() {
 	printf("OK\n");
-	return 0;
+	return 1;
 }
