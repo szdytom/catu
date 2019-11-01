@@ -2,6 +2,7 @@
 #include "testlib.h"
 #include "../random.h"
 using namespace std;
+using namespace catu;
 
 int main() {
 	rand_init();
@@ -14,10 +15,10 @@ int main() {
 	//#2
 	x = rrange(3, 3);
 	if (x == 3) testok();
-	else test_fail("rrange error. #2")
+	else test_fail("rrange error. #2");
 
 	//#3
-	long long y = rrange(1e10, 1e11);
+	long long y = rrange((long long)(1e10), (long long)(1e11));
 	if (y <= 1e11 && y >= 1e10) testok();
 	else test_fail("rrange error.(long long) #3");
 

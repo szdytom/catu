@@ -1,6 +1,8 @@
-##ifndef TEST_LIB_H
+#ifndef TEST_LIB_H
 #define TEST_LIB_H
 #include <time.h>
+#include <cstdlib>
+#include <string>
 
 int test_case;
 time_t start_time;
@@ -13,7 +15,7 @@ void test_init(int n) {
 
 void stop_test() {
 	time_t endt = clock();
-	printf("[I]Time Used %u ms.\n", endt - start_time);
+	printf("\n[I]Time Used %lld ms.\n", endt - start_time);
 }
 
 void testok() {
@@ -21,13 +23,14 @@ void testok() {
 	--test_case;
 }
 
-void test_fail(char *s) {
+void test_fail(std::string s) {
+	using namespace std;
 	printf("E");
 	--test_case;
 	for (int i = 1; i <= test_case; ++i) {
 		printf("S");
 	}
-	printf("\n[E]Error massage:\n%s\n", s);
+	printf("\n[E]Error massage:\n%s\n", s.c_str());
 	stop_test();
 	printf("[E]abort\n");
 	abort();
