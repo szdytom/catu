@@ -15,7 +15,7 @@ void test_init(int n) {
 
 void stop_test() {
 	time_t endt = clock();
-	printf("\n[I]Time Used %lld ms.\n", endt - start_time);
+	printf("\n[I]Time Used %ld ms.\n", endt - start_time);
 }
 
 void testok() {
