@@ -15,7 +15,7 @@ int main() {
 
 	// #2
 	x = intlen(12345687987LL);
-	if (x == 6) testok();
+	if (x == 11) testok();
 	else test_fail("Error at intlen.");
 
 	stop_test();
