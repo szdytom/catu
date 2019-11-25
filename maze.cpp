@@ -13,6 +13,5 @@ public:
 	}
 	void __make_rand(int l, int r)
 	{
-		for (int i = 0; i < )
 	}
 };
