@@ -25,7 +25,7 @@ struct random_base {
 		}
 		return res;
 	}
-}
+};
 
 template <typename T>
 T random(unsigned int len) {
