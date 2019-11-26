@@ -1,9 +1,6 @@
 #include <vector>
 #include "random.h"
 
-namespace catu
-{
-
 template <typename T>
 class maze
 {
@@ -40,5 +37,3 @@ public:
 			maze[i].clear();
 	}
 };
-
-}
