@@ -14,7 +14,7 @@ void rand_init() {
 
 // make a random interger length len
 template<typename T> 
-T random(unsigned int len) {
+T random(T len) {
 	T res = 0;
 	for (int i = 1; i <= len; ++i) {
 		res = res * 10 + rand() % 9 + 1;
