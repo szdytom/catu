@@ -3,6 +3,7 @@
 
 #include <cstdlib>
 #include <ctime>
+#include <sstream>
 #include "tools.h"
 
 namespace catu {
@@ -13,10 +14,10 @@ void rand_init() {
 
 // make a random interger length len
 template<typename T> 
-T random(T len) {
+T random(unsigned int len) {
 	T res = 0;
 	for (int i = 1; i <= len; ++i) {
-		res = res * 10 + rand() % 10;
+		res = res * 10 + rand() % 9 + 1;
 	}
 	return res;
 }
