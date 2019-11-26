@@ -3,7 +3,6 @@
 
 #include <cstdlib>
 #include <ctime>
-#include <sstream>
 #include "tools.h"
 
 namespace catu {
@@ -13,19 +12,31 @@ void rand_init() {
 }
 
 // make a random interger length len
-template<typename T> 
-T random(T len) {
-	T res = 0;
-	for (int i = 1; i <= len; ++i) {
-		res = res * 10 + rand() % 9 + 1;
+template <class T>
+struct random_base {
+	random_base () {
+		rand_init();
 	}
-	return res;
+
+	T operator () (unsigned int len) {
+		T res = 0;
+		for (int i = 1; i <= len; ++i) {
+			res = res * 10 + rand() % 9 + 1;
+		}
+		return res;
+	}
+}
+
+template <typename T>
+T random(unsigned int len) {
+	random_base<T> r;
+	return r(len);
 }
 
 // make a random interger in [left, right]
 template <typename T> 
 T rrange(T left, T right) {
-	T x = random(catu::intlen(right));
+	T x = random<T>(intlen(right));
 	return x % (right - left + 1) + left;
 }
 
