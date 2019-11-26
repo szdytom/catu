@@ -4,7 +4,7 @@ pipeline {
     stage('Check Out') {
       steps {
         checkout([$class: 'GitSCM', branches: [[name: env.GIT_BUILD_REF]], 
-                                                                                  userRemoteConfigs: [[url: env.GIT_REPO_URL, credentialsId: env.CREDENTIALS_ID]]])
+                                                                                          userRemoteConfigs: [[url: env.GIT_REPO_URL, credentialsId: env.CREDENTIALS_ID]]])
       }
     }
     stage('Compile') {
@@ -19,18 +19,9 @@ pipeline {
         sh './test_tools.out'
       }
     }
-    stage('并行阶段 4') {
-      parallel {
-        stage('Collect') {
-          steps {
-            archiveArtifacts '*.out'
-          }
-        }
-        stage('push to github') {
-          steps {
-            sh 'git push git@github.com:szdytom/catu.git master --force'
-          }
-        }
+    stage('Collect') {
+      steps {
+        archiveArtifacts '*.out'
       }
     }
   }
