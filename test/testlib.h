@@ -2,7 +2,7 @@
 #define TEST_LIB_H
 #include <time.h>
 #include <cstdlib>
-#include <string>
+#include <stdarg.h>
 
 int test_case;
 time_t start_time;
@@ -23,14 +23,19 @@ void testok() {
 	--test_case;
 }
 
-void test_fail(std::string s) {
-	using namespace std;
+void test_fail(char *s, ...) {
+	va_list argp;	
+
 	printf("E");
 	--test_case;
 	for (int i = 1; i <= test_case; ++i) {
 		printf("S");
 	}
-	printf("\n[E]Error massage:\n%s\n", s.c_str());
+
+	char msg[512];
+	sprintf(s, argp);
+
+	printf("\n[E]Error massage:\n%s\n", s);
 	stop_test();
 	printf("[E]abort\n");
 	abort();

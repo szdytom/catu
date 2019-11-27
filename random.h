@@ -7,6 +7,8 @@
 
 namespace catu {
 
+bool __random_inited = 0;
+
 void rand_init() {
 	srand((unsigned)time(NULL));
 }
@@ -15,7 +17,10 @@ void rand_init() {
 template <class T>
 struct random_base {
 	random_base () {
-		rand_init();
+		if (!__random_inited) {
+			rand_init();
+			__random_inited = 1;
+		}
 	}
 
 	T operator () (unsigned int len) {
