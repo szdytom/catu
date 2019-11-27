@@ -1,6 +1,8 @@
 #ifndef TOOLS_H
 #define TOOLS_H
 
+#include <math.h>
+
 namespace catu {
 	
 // count the length of an interger
@@ -12,6 +14,15 @@ T intlen(T x) {
 		x /= 10;
 	}
 	return res;
+}
+
+// check prime
+template <typename T>
+bool is_prime(T x)
+{
+	for (int i = 2; i <= sqrt(x); i ++)
+		if (x % i == 0) return false;
+	return true;
 }
 
 }
