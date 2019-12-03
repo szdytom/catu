@@ -26,3 +26,7 @@
 *.exe
 *.out
 *.app
+
+# VS Code
+*.code-workspace
+*.vsix
