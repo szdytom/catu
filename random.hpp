@@ -24,9 +24,9 @@ struct random_base {
 	}
 
 	T operator () (unsigned int len) {
-		T res = 0;
-		for (int i = 1; i <= len; ++i) {
-			res = res * 10 + rand() % 9 + 1;
+		T res = rand() % 9 + 1;
+		for (int i = 1; i < len; ++i) {
+			res = res * 10 + rand() % 10;
 		}
 		return res;
 	}
