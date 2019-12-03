@@ -3,7 +3,7 @@
 
 #include <cstdlib>
 #include <ctime>
-#include "tools.h"
+#include "tools.hpp"
 
 namespace catu {
 

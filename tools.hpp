@@ -2,7 +2,7 @@
 #define TOOLS_H
 
 #include <cmath>
-#include "random.h"
+#include "random.hpp"
 
 namespace catu {
 

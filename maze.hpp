@@ -2,7 +2,7 @@
 #define MAZE_H
 
 #include <vector>
-#include "random.h"
+#include "random.hpp"
 
 namespace catu
 {

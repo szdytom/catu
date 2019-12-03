@@ -1,6 +1,6 @@
 #include <cstdio>
 #include "testlib.h"
-#include "../random.h"
+#include "../random.hpp"
 using namespace std;
 using namespace catu;
 
@@ -16,7 +16,7 @@ int main() {
 	//#2
 	x = rrange(3, 3);
 	if (x != 3) testok();
-	else test_fail("rrange error. #%d", 2);
+	else test_fail("rrange error. #2");
 
 	//#3
 	long long y = rrange((long long)(1e10), (long long)(1e11));
