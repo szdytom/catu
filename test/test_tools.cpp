@@ -1,7 +1,7 @@
 #include <cstdio>
 #include "testlib.h"
-#include "../tools.h"
-#include "../random.h"
+#include "../tools.hpp"
+#include "../random.hpp"
 using namespace std;
 using namespace catu;
 
@@ -29,7 +29,7 @@ int main() {
 	// #3 - #20
 	for (int i = 3; i <= 20; ++i) {
 		int num = rrange(10, 1000000);
-		if (is_prime(num) ^ mis_prime(num)) test_fail("Error at is_prime. ")
+		if (is_prime(num) ^ mis_prime(num)) test_fail("Error at is_prime. ");
 	}
 
 	stop_test();

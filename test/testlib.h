@@ -23,17 +23,12 @@ void testok() {
 	--test_case;
 }
 
-void test_fail(char *s, ...) {
-	va_list argp;	
-
+void test_fail(char *s) {
 	printf("E");
 	--test_case;
 	for (int i = 1; i <= test_case; ++i) {
 		printf("S");
 	}
-
-	char msg[512];
-	sprintf(s, argp);
 
 	printf("\n[E]Error massage:\n%s\n", s);
 	stop_test();
