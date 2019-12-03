@@ -2,6 +2,7 @@
 #define MAZE_H
 
 #include <vector>
+#include "fatal.hpp"
 #include "random.hpp"
 
 namespace catu
@@ -66,7 +67,7 @@ public:
 		build_rand(l, r, tmp);
 		if (direction == 4) dfs_four();
 		else if (direction == 8) dfs_eight();
-		else /*FATAL*/
+		else output_fatal("not able directions");
 	}
 };
 
