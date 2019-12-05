@@ -2,19 +2,17 @@
 #define FATAL_H
 
 #include <stdio.h>
-#include <iostream>
-#include <string>
+#include <string.h>
 
 namespace catu
 {
-
-void output_fatal(std::string FATAL_PROBLEM_STR)
-{
-    std::cout << "ERROR INPUT!!\n";
-    std::cout << "problem:\n";
-    std::cout << FATAL_PROBLEM_STR;
-}
-
+    void errorf(char* type, ...)
+    {
+        for (int i = 0; i < strlen(type); i ++)
+        {
+            
+        }
+    }
 }
 
 #endif
