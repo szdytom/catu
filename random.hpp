@@ -2,15 +2,15 @@
 #define RANDOM_H
 
 #include <cstdlib>
-#include <ctime>
+#include <time.h>
 #include "tools.hpp"
 
 namespace catu {
 
 bool __random_inited = 0;
 
-void rand_init() {
-	srand((unsigned)time(NULL));
+inline void rand_init() {
+	srand((unsigned)time(0));
 }
 
 // make a random interger length len
@@ -18,7 +18,7 @@ template <class T>
 struct random_base {
 	random_base () {
 		if (!__random_inited) {
-			rand_init();
+			srand((unsigned)time(NULL));
 			__random_inited = 1;
 		}
 	}
@@ -26,7 +26,7 @@ struct random_base {
 	T operator () (unsigned int len) {
 		T res = rand() % 9 + 1;
 		for (int i = 1; i < len; ++i) {
-			res = res * 10 + rand() % 10;
+			res = res * 10 + (rand() & 9);
 		}
 		return res;
 	}
