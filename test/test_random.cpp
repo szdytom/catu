@@ -15,7 +15,7 @@ int main() {
 
 	//#2
 	x = rrange(3, 3);
-	if (x != 3) testok();
+	if (x == 3) testok();
 	else test_fail("rrange error. #2");
 
 	//#3
