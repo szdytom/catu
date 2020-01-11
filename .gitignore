@@ -28,4 +28,9 @@
 *.app
 
 # VS Code
+<<<<<<< HEAD
 *.code-workspace
+=======
+*.code-workspace
+*.vsix
+>>>>>>> dadc60bc9519690d0faab8d68b3d27ef0602574d
