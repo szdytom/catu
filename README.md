@@ -5,4 +5,4 @@
 
 源码下载:
 - [coding仓库](https://e.coding.net/gdgzoi/catu.git)
-- [github仓库(敬请期待)]()
+- [github仓库](https://github.com/szdytom/catu)
