@@ -1,4 +1,4 @@
-#! /usr/bin/sh
+# /usr/bin/sh
 
 cd /home/runner/work/catu/catu/.github/test/
 
