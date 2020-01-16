@@ -1,6 +1,6 @@
 #include <cstdio>
 #include "testlib.h"
-#include "../random.hpp"
+#include "../../random.hpp"
 using namespace std;
 using namespace catu;
 

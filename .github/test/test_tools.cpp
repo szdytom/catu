@@ -1,7 +1,7 @@
 #include <cstdio>
 #include "testlib.h"
-#include "../tools.hpp"
-#include "../random.hpp"
+#include "../../tools.hpp"
+#include "../../random.hpp"
 using namespace std;
 using namespace catu;
 
