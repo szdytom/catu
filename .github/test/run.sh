@@ -1,5 +1,7 @@
 #! /usr/bin/sh
 
+cd /home/runner/work/catu/catu/.github/test/
+
 echo Compile Start
 for code in $(echo *.cpp); do
 	g++ -std=c++11 -Wall -Wextra $code -o $code.out
