@@ -11,3 +11,5 @@ jobs:
     - uses: actions/checkout@v1
     - name: remove VS codefile
       run: rm -rf .vscode
+    - name: run test
+    - run: ls
