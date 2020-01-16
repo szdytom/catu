@@ -11,5 +11,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: remove VS codefile
       run: rm -rf .vscode
+    - name: set power
+    - run: chmod +x ./.github/test/run.sh
     - name: run test
-      run: /usr/bin/bash ./.github/test/run.sh
+      run: ./.github/test/run.sh
