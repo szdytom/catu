@@ -12,6 +12,6 @@ jobs:
     - name: remove VS codefile
       run: rm -rf .vscode
     - name: set power
-    - run: chmod +x ./.github/test/run.sh
+      run: chmod +x ./.github/test/run.sh
     - name: run test
       run: ./.github/test/run.sh
